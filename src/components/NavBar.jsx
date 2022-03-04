@@ -1,4 +1,4 @@
-import logo from '../logo.svg';
+import logo from '../pngwing.com.png';
 import '../App.css';
 import CartWidget from './CartWidget';
 
@@ -6,12 +6,12 @@ import { AiOutlineUser } from "react-icons/ai";
 
 const NavBar = () => {
     return (
-        <nav className="bg-zinc-800 shadow-lg h-500">
+        <nav className="bg-[#02236d] shadow-lg h-500">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex justify-between">
                     <div className="flex space-x-7">
                         <a href="#" className="flex items-center py-4 px-2">
-                            <img src={logo} alt="Logo" className="h-20 w-20 mr-2 App-logo" />
+                            <img src={logo} alt="Logo" className=" w-12 mr-2" />
                         </a>
                     </div>
                     <div className="hidden md:flex items-center space-x-5">

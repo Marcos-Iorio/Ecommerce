@@ -6,9 +6,9 @@ function App() {
   return (
     <div className='h-screen'>
       <NavBar/>
-      <div className="grid place-content-center h-full font-bold">
-			<ItemListContainer/>
-	  </div>
+      <div className="grid justify-center h-full font-bold">
+			  <ItemListContainer/>
+	    </div>
     </div>
   );
 }
