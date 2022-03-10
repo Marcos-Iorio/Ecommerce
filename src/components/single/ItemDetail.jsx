@@ -2,6 +2,7 @@ import React from "react";
 import { isAccordionItemSelected } from "react-bootstrap/esm/AccordionContext";
 import ItemCount from './ItemCount'
 
+
 const ItemDetail = ({item}) => {
     return(
         <>

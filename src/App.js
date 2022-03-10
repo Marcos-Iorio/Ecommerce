@@ -1,17 +1,24 @@
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/producto/ItemListContainer';
 import ItemDetailContainer from './components/single/ItemDetailContainer';
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className='h-screen'>
-      <NavBar/>
-      <div className="grid justify-center h-full font-bold">
-			  <ItemListContainer/>
-        <ItemDetailContainer/>
-	    </div>
-    </div>
+	<div className='h-screen'>
+		<BrowserRouter>
+			<NavBar/>
+			<Routes>
+				<Route exact path="/" element={<ItemListContainer/>}>
+				</Route>
+				<Route path="/cart">
+				</Route>
+				<Route path="/itemDetailContainer/:itemId" element={<ItemDetailContainer/>}></Route>
+			</Routes>
+		</BrowserRouter>
+	</div>
+    
   );
 }
 

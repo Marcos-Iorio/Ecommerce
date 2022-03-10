@@ -4,7 +4,10 @@ import '../App.css';
 
 const Loading = () => {
     return(
-        <img src={logo} alt="Loading Logo" className=" w-12 mr-2 App-logo" />
+        <div className="grid place-content-center">
+            <img src={logo} alt="Loading Logo" className=" w-12 mr-2 App-logo" />
+        </div>
+        
     );
 }
 export default Loading;

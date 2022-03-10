@@ -1,12 +1,20 @@
 import {React, useEffect, useState} from "react";
+import {useParams} from 'react-router-dom';
 import ItemDetail from './ItemDetail'
+import Loading from "../Loading";
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState({});
+    const [isLoading, setLoading] = useState(true);
+    const {itemId} = useParams();
+
+    useEffect(() =>{
+        console.log(itemId);
+    }, [itemId]);
 
     const getProductInfo = async () =>{
         try {
-            const response = await fetch('https://api.mercadolibre.com/items/MLA862046257', {
+            const response = await fetch(`https://api.mercadolibre.com/items/${itemId}`, {
             method: 'GET'
             })
             const data = await response.json();
@@ -20,12 +28,13 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         setTimeout(() => {
             getProductInfo();
-        }, 2000);
+            setLoading(false)
+        }, 1000);
     }, [])
 
     return(
-        <div>
-            <ItemDetail item={productDetail}></ItemDetail>
+        <div className="m-20">
+            {isLoading ? <Loading/> : <ItemDetail item={productDetail}></ItemDetail>}
         </div>
     );
      
