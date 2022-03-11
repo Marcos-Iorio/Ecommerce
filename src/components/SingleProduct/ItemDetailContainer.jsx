@@ -1,7 +1,7 @@
 import {React, useEffect, useState} from "react";
 import {useParams} from 'react-router-dom';
 import ItemDetail from './ItemDetail'
-import Loading from "../Loading";
+import Loading from "../Loading/Loading";
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState({});

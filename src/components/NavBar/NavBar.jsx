@@ -1,6 +1,5 @@
-import logo from '../pngwing.com.png';
-import '../App.css';
-import CartWidget from './CartWidget';
+import logo from './pngwing.com.png';
+import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
 
 import { AiOutlineUser } from "react-icons/ai";
