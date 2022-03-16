@@ -30,8 +30,8 @@ const ItemList = () => {
              <div className="grid grid-cols-[repeat(4,250px)] gap-[2em] place-content-center">
                     { productos.map(producto => {
                     return(
-                        <NavLink to={`/itemDetailContainer/${producto.id}`} className="w-[250px]">
-                            <div key={producto.id} className="group h-[400px] w-[250px] rounded-md bg-[#02236d] border-transparent border-2 hover:shadow-xl hover:border-yellow-400 hover:border-2 hover:border-solid transition ease ">
+                        <NavLink to={`/itemDetailContainer/${producto.id}`} key={producto.id} className="w-[250px]">
+                            <div className="group h-[400px] w-[250px] rounded-md bg-[#02236d] border-transparent border-2 hover:shadow-xl hover:border-yellow-400 hover:border-2 hover:border-solid transition ease ">
                                 <div className="h-[50%] p-5">
                                     <img className="w-full h-[100%] text-center rounded-md group-hover:shadow-lg group-hover:shadow-black/50" src={producto.thumbnail} alt={producto.title} />
                                 </div>

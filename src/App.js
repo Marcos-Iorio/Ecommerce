@@ -1,6 +1,7 @@
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Product/ItemListContainer';
 import ItemDetailContainer from './components/SingleProduct/ItemDetailContainer';
+import Footer from './components/Footer/Footer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
@@ -16,6 +17,7 @@ function App() {
 				</Route>
 				<Route path="/itemDetailContainer/:itemId" element={<ItemDetailContainer/>}></Route>
 			</Routes>
+			<Footer className="m-auto"/>
 		</BrowserRouter>
 	</div>
     

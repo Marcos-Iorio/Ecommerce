@@ -26,15 +26,13 @@ const ItemDetailContainer = () => {
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            getProductInfo();
-            setLoading(false)
-        }, 1000);
+        getProductInfo();
+        setLoading(false)
     }, [])
 
     return(
         <div className="m-20">
-            {isLoading ? <Loading/> : <ItemDetail item={productDetail}></ItemDetail>}
+            {isLoading || Object.keys(productDetail).length === 0 ? <Loading/> : <ItemDetail item={productDetail}></ItemDetail>}
         </div>
     );
      
