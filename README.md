@@ -5,7 +5,7 @@ Learning the basics of React and Tailwind :)
 
 To use de app, downloaded it and run **npm start**
 
-*API
+* API
 
 To retrieve information about the products i'm using Mercado Libre´s API
 
