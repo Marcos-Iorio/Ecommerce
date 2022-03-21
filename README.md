@@ -3,7 +3,7 @@
 Learning the basics of React and Tailwind :)
 
 
-To use de app, downloaded it and run **npm start**
+To use the app, download it and run **npm start**
 
 * API
 
