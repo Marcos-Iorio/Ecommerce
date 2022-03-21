@@ -1,4 +1,4 @@
-# Ecommerce build with React.js
+# Ecommerce builded with React.js
 
 Learning the basics of React and Tailwind :)
 
