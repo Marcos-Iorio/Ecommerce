@@ -6,8 +6,8 @@ import { AiFillYoutube, AiOutlineInstagram, AiOutlineTwitter } from "react-icons
 
 const Footer = () => {
     return(
-        <div className="bg-[#02236d] h-[300px]">
-            <div className="grid grid-cols-3 place-content center h-full">
+        <div className="bg-[#02236d] h-full md:h-[300px] md:w-full overflow-hidden">
+            <div className="grid grid-cols-1 place-content center h-full md:grid-cols-3">
                 <div className="p-5 flex flex-col items-center justify-center">
                     <div className="text-yellow-500 text-lg text-center p-5"><strong>Contacto</strong></div>
                     <ul className="list-none">

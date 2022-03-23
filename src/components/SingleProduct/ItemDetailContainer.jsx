@@ -19,6 +19,7 @@ const ItemDetailContainer = () => {
             })
             const data = await response.json();
             setProductDetail(data)
+            setLoading(false);
         } catch (error) {
             console.error(error);
         }
@@ -27,7 +28,6 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         getProductInfo();
-        setLoading(false)
     }, [])
 
     return(
