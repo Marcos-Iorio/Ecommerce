@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
     }, [])
 
     return(
-        <div className="m-20">
+        <div className="m-5 md:m-20">
             {isLoading || Object.keys(productDetail).length === 0 ? <Loading/> : <ItemDetail item={productDetail}></ItemDetail>}
         </div>
     );

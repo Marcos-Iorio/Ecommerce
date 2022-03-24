@@ -18,7 +18,6 @@ const NavBar = () => {
             isOpen(false);
         }
     }
-    console.log(open)
     if(!isMobile){
         return (
             <nav className="bg-[#02236d] shadow-lg h-500">
@@ -71,7 +70,7 @@ const NavBar = () => {
                         </div>
                     </div>
                 </nav>
-                <div className={open === true ? 'fixed h-full w-full z-50 bg-yellow-400 top-0 translate-x-0 transition duration-150 ease' : 'hidden'} ref={openMenuMobile}>
+                <div className={open === true ? 'fixed h-full w-full z-50 bg-yellow-400 top-0 translate-x-0 transition duration-150 ease' : 'fixed h-full w-full z-50 top-0 translate-x-[1000px] transition duration-150 ease'} ref={openMenuMobile}>
                     <div className='h-full'>
                         <MdClear onClick={openMenu} className="m-5 text-[#02236d] text-3xl"></MdClear>
                         <div className='h-full'>
