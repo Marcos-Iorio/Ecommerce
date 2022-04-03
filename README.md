@@ -2,12 +2,14 @@
 
 Learning the basics of React and Tailwind :)
 
+Execute this commands in order to download, install de packages and initialize the app.
+
 ```
 git clone https://github.com/Marcos-Iorio/Ecommerce.git
 
-git cd src
-
 npm i
+
+git cd src
 
 npm start
 
