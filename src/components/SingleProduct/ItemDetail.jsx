@@ -31,7 +31,7 @@ const ItemDetail = ({item}) => {
             <div key={item.id} className="flex flex-row justify-center bg-[#02236d] rounded-lg shadow-2xl h-full">
                 <div className="p-10 flex flex-col w-full md:flex-row md:w-[80%] ">
                     <img className="w-full md:w-[50%] h-full rounded-lg" src={item.pictures[0].url} alt={item.title} />
-                    <div className="flex flex-col h-full py-[50px] w-[100%] justify-between">
+                    <div className="flex flex-col h-full md:ml-10 py-[50px] w-[100%] justify-between">
                         <h1 className="text-3xl text-white">{item.title}</h1>
                         <p className="text-xl text-white">{item.description ? item.description : ''}</p>
                         <div className="flex flex-col h-96">

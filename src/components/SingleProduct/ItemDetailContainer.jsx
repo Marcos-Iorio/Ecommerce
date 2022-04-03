@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
     const getProductInfo = async () =>{
         try {
-            const response = await fetch(`https://api.mercadolibre.com/items/${itemId}`, {
+            const response = await fetch(`http://localhost:5000/api/item/${itemId}`, {
             method: 'GET'
             })
             const data = await response.json();

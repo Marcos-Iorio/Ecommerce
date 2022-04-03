@@ -4,7 +4,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom'
 import { isMobile } from 'react-device-detect';
 
-import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { MdClear } from "react-icons/md";
 
 
@@ -29,13 +29,12 @@ const NavBar = () => {
                             </li>
                         </div>
                         <div className='flex'>
-                            <ul className="md:flex flex-row items-center space-x-5">
-                                <Link to={'/'}><li className="py-4 px-2 text-white border-b-4 border-yellow-400 font-semibold">Home</li></Link>
-                                <Link to={'/tienda'}><li className="py-4 px-2 text-white font-semibold hover:text-yellow-400">Tienda</li></Link>
-                                <Link to={'/sobre-nosotros'}><li className="py-4 px-2 text-white font-semibold hover:text-yellow-400">Nosotros</li></Link>
-                                <Link to={'/contacto'}><li className="py-4 px-2 text-white font-semibold hover:text-yellow-400 ">Contacto</li></Link>
-                            </ul>
-                           
+                            <div className="md:flex flex-row items-center space-x-7 w-[325px]">
+                                <form action="/items" method='GET' className='flex justify-around w-full'>
+                                    <input type="search" name="search" id="search" placeholder='Busca un producto..' className='w-[80%] rounded-md p-2 outline-none' />
+                                    <button className='text-black text-2xl p-1 rounded-md bg-yellow-500' ><AiOutlineSearch></AiOutlineSearch></button>
+                                </form>
+                            </div>
                         </div>
                         <div>
                             <ul className='flex items-center justify-center p-5 w-80'>
@@ -74,12 +73,12 @@ const NavBar = () => {
                     <div className='h-full'>
                         <MdClear onClick={openMenu} className="m-5 text-[#02236d] text-3xl"></MdClear>
                         <div className='h-full'>
-                            <ul className="grid grid-cols-1 justify-items-center">
-                                <Link to={'/'}><li className="py-4 px-2 text-[#02236d] text-xl border-b-4 border-[#02236d] font-semibold">Home</li></Link>
-                                <Link to={'/tienda'}><li className="py-4 px-2 text-[#02236d] text-xl font-semibold hover:text-white">Tienda</li></Link>
-                                <Link to={'/sobre-nosotros'}><li className="py-4 px-2 text-[#02236d] text-xl font-semibold hover:text-white">Nosotros</li></Link>
-                                <Link to={'/contacto'}><li className="py-4 px-2 text-[#02236d] text-xl font-semibold hover:text-white ">Contacto</li></Link>
-                            </ul>
+                            <div className="grid grid-cols-1 justify-items-center">
+                                <form action="/items" method='GET' className='flex justify-around w-full'>
+                                    <input type="search" name="search" id="search" placeholder='Busca un producto..' className='w-[80%] rounded-md p-2 outline-none' />
+                                    <button className='text-white text-2xl p-1 rounded-md bg-[#02236d]' ><AiOutlineSearch></AiOutlineSearch></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
